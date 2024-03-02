@@ -4,6 +4,8 @@ import { connectDBHandler } from "../../apollo/server/db";
 import typeDefs from "../../apollo/server/typeDefs/todoType";
 import resolvers from "../../apollo/server/resolvers/todoResolver";
 
+console.log("🚀 ~ fd:")
+
 const apolloServer = new ApolloServer({
   typeDefs,
   resolvers,
@@ -18,11 +20,11 @@ const apolloServer = new ApolloServer({
   },
 });
 
-const handler = connectDBHandler(
+connectDBHandler(
   startServerAndCreateNextHandler(apolloServer)
 );
 
-export { handler as GET, handler as POST };
+// export { handler as GET, handler as POST };
 
 // Add some logging
-console.log("Server setup completed");
+// console.log("Server setup completed");
