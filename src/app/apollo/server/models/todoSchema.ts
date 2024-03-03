@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 const Schema = mongoose.Schema;
-import { TodoType } from "@/Types/todos";
+import { TodoType } from "@/app/Types/todos";
 
 const todoSchema = new Schema<TodoType>({
     title: {
@@ -16,5 +16,6 @@ const todoSchema = new Schema<TodoType>({
     timestamps: true
 })
 
-const Todo = mongoose.model('Todo', todoSchema)
+// Define Todo model if it hasn't been defined yet
+const Todo = mongoose.models.Todo || mongoose.model('Todo', todoSchema)
 export default Todo

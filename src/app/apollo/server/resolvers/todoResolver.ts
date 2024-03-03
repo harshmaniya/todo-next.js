@@ -1,5 +1,5 @@
 import Todo from "../models/todoSchema"
-import { ArgsType } from "@/Types/todos";
+import { ArgsType } from "@/app/Types/todos";
 
 
 const addToDo = async (_: any, args: ArgsType) => {
