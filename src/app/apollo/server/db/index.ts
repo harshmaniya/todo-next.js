@@ -17,7 +17,7 @@
 
 import mongoose from "mongoose";
 
-export const connectDBHandler = (handler:any) => async (req:Request, res:Response) => {
+export const connectDBHandler = (handler: any) => async (req:Request, res:Response) => {
   if (mongoose.connections[0].readyState !== 1) {
     console.log("X not connected X")
     await mongoose

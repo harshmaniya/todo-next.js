@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client';
+import { gql } from 'apollo-server';
 
 const typeDefs = gql`
     type ToDo {
@@ -22,4 +22,5 @@ const typeDefs = gql`
         deleteToDo(_id: ID!): status
     }
 `
+
 export default typeDefs
